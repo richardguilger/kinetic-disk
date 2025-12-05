@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pousada Miss Roses - Website & Sistema de Reservas
 
-## Getting Started
+Este projeto é um site completo para a Pousada Miss Roses, desenvolvido com **Next.js**, **Vanilla CSS** e **Firebase**.
 
-First, run the development server:
+## Funcionalidades
+
+- **Site Institucional**: Home, Acomodações, Estrutura, Localização.
+- **Sistema de Reservas**: Calendário, seleção de quartos, pagamento via Mercado Pago.
+- **Painel Administrativo**: Gestão de reservas e acomodações.
+- **Notificações**: Integração preparada para WhatsApp/Email.
+
+## Configuração
+
+### 1. Variáveis de Ambiente
+
+Crie um arquivo `.env.local` na raiz do projeto com as seguintes chaves:
+
+```env
+# Firebase
+NEXT_PUBLIC_FIREBASE_API_KEY=seu_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=seu_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=seu_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=seu_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=seu_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=seu_app_id
+
+# Mercado Pago
+MP_ACCESS_TOKEN=seu_access_token_producao
+NEXT_PUBLIC_BASE_URL=https://seu-dominio.com
+```
+
+### 2. Instalação
+
+```bash
+npm install
+```
+
+### 3. Desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Build & Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy (Vercel)
 
-## Learn More
+1. Faça push do código para o GitHub.
+2. Importe o projeto na Vercel.
+3. Adicione as variáveis de ambiente no painel da Vercel.
+4. O deploy será automático.
 
-To learn more about Next.js, take a look at the following resources:
+## Painel Admin
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Acesse `/admin/login` para gerenciar o sistema.
+Crie o primeiro usuário diretamente no Firebase Authentication.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estrutura de Pastas
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app`: Páginas e Rotas API.
+- `src/components`: Componentes React reutilizáveis.
+- `src/lib`: Configurações (Firebase, Mercado Pago).
+- `public/assets`: Imagens e arquivos estáticos.

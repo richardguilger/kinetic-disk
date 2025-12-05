@@ -1,0 +1,68 @@
+.booking-process {
+    background-color: var(--color-secondary);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    flex: 1;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-md);
+}
+
+.step-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.step-item p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    max-width: 200px;
+}
+
+.step-connector {
+    flex: 1;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 25px;
+    /* Half of step-number height */
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .step-connector {
+        display: none;
+    }
+}

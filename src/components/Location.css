@@ -1,0 +1,41 @@
+.location-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.map-container {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.distances-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.distance-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.distance-icon {
+    font-size: 2rem;
+}
+
+.distance-info h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.distance-info p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
